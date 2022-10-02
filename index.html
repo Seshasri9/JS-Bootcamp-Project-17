@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/493f3e8035.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section aria-label="Header-section">
+        <nav class="relative mx-auto p-3">
+          <div class="flex items-center justify-between">
+            <div>
+                <img class="m-2 w-[120px] ml-20" src="data:image/png;base64,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" alt="logo">
+            </div>
+            <div class="hidden md:block mr-[250px] capitalize px-10 space-x-4 text-xl font-bold text-slate-500">
+                <a href="#">start</a>
+                <a href="#">sell</a>
+                <a href="#">market</a>
+                <a href="#">manage</a>
+            </div>
+            <div class="hidden md:block mr-[100px] capitalize space-x-4 text-xl font-bold text-slate-500">
+                <a href="#">Pricing</a>
+                <a href="#">Learn</a>
+                <a href="#">Log in</a>
+            </div>
+            <div>
+                <a class="px-10 py-3 bg-green-900 text-white rounded-lg hover:bg-green-400 mr-2 ml-auto  flex items-center pl-3 justify-between space-x-3 rounded color-white md:pl-4 md:py-1 " href="#">Try For Free</a>
+            </div>
+         </div> 
+        </nav>
+    </section>
+    <!-- first -->
+    <div class="flex flex-col items-center md:flex-row mx-auto justify-between ">
+        <div>
+            <h1 class="text-green-700 text-5xl font-bold m-10 mt-40">
+                The easiest way to sell <br> online in India
+            </h1>
+            <p class="text-xl text-slate-500 m-10">
+                Try one of the most powerful platforms on the market <br> for free. No technical knowledge needed.
+            </p>
+            <button class="bg-transparent border-2 border-black rounded-xl px-5 py-3 ml-10">
+                Enter Your Email address
+            </button>
+            <button class="bg-green-700 text-white rounded-xl px-5 py-2 text-lg   ml-[50px] ">
+                Try For Free 
+            </button>
+            <p class="m-10 text-[12px]">
+                Try Shopify free for 14 days, no credit card required. By entering your email, you agree to <br> receive marketing emails from Shopify.
+            </p>
+        </div>
+        <div>
+            <img class="w-[700px] ml-20 mt-10" src="https://cdn.shopify.com/shopifycloud/brochure/assets/home/hero/in-hero-product-small-0c64c4c1013fc8ac477cb5ff62bf5b56b2903aec697e6b708b90d3b65a09baf8.jpg" alt="">
+        </div>
+    </div>
+    <!-- second -->
+    <div class="bg-emerald-900 h-[3800px] md:h-[1200px]">
+        <h1 class="text-white text-4xl pt-20 pl-10 ">
+            Bring your business online
+        </h1>
+        <p class="text-white text-lg md:text-xl pl-10 pt-3">
+            Create an ecommerce website backed by powerful tools that help you find customers, drive sales, and manage your day-to-day.
+        </p>
+        <h3 class="text-white text-xl pl-10 pt-3">
+            Explore more examples
+        </h3>
+        <div class="flex flex-col md:flex-row pl-10 space-x-6 pt-10">
+            <div>
+                <img class="w-[230px]" src="https://cdn.shopify.com/shopifycloud/brochure/assets/merchants/blue-tokai/home-example-small-4144844351e226a9896cffee4bebdaeecb17897116c33a753bfd086b8b621e74.jpg" alt="">
+                <h2 class="text-white text-xl capitalize">
+                    Food & Drink
+                </h2>
+                <h3 class="text-white text-xl capitalize">
+                    Blue Tokai
+                </h3>
+            </div>
+            <div>
+                <img class="w-[230px]" src="https://cdn.shopify.com/shopifycloud/brochure/assets/merchants/quirksmith/home-example-small-8b1c6b138414b76150e6e00f5143c4301a07b708aa6113dd7096f4340ddfecad.jpg" alt="">
+                <h2 class="text-white text-xl capitalize">
+                    JEWELARY
+                </h2>
+                <H3 class="text-white text-xl capitalize">
+                    Quirksmith
+                </H3>
+            </div>
+            <div>
+                <img class="w-[230px]" src="https://cdn.shopify.com/shopifycloud/brochure/assets/merchants/crossbeats/home-example-small-099933088cbe804543fbb1b0963a5d0a16365e73e6000949b5b0ab2bf4b21503.jpg" alt="">
+                <h2 class="text-white text-xl capitalize">
+                    Electronics
+                </h2>
+                <h3 class="text-white text-xl capitalize">
+                    Crossbeats
+                </h3>
+            </div>
+            <div>
+                <img class="w-[230px]" src="https://cdn.shopify.com/shopifycloud/brochure/assets/merchants/mcaffeine/home-example-small-26afc247af7a3a7b1c9c585a645ccdff26e76156e98be7d9ff0fe9ecd4d3b675.jpg" alt="">
+                <h2 class="text-white text-xl capitalize">
+                    BEAUTY
+                </h2>
+                <h3 class="text-white text-xl capitalize">
+                    mcaffeine
+                </h3>
+            </div>
+            <div>
+                <img class="w-[230px]" src="https://cdn.shopify.com/shopifycloud/brochure/assets/merchants/bunaai/home-example-small-4575b175c798e22af5531bae02621396add507433f771db37b1515e9941f8a45.jpg" alt="">
+                <h2 class="text-white text-xl capitalize">
+                    Fashion
+                </h2>
+                <h3 class="text-white text-xl capitalize" >
+                    bunaai
+                </h3>
+            </div>
+        </div>
+        <h1 class="text-white pl-10 pt-20 text-4xl">
+            Take the best path forward
+        </h1>
+      <div class="flex flex-col md:flex-row pl-10 pt-20">
+        <div class="p-10">
+            <img src="./shopify-95384ba1-2884-4311-bb59-ad6924cd0962/assets/sectionTwo-a.png" alt="">
+            <h1 class="text-white text-2xl">
+                Start an online business
+            </h1>
+            <p class="text-white text-[15px]">
+                Create a business, whether you’ve <br> got a fresh idea or are looking for a <br> new way to make money.
+            </p>
+        </div>
+        <div class="p-10">
+            <img src="./shopify-95384ba1-2884-4311-bb59-ad6924cd0962/assets/sectionTwo-b.png" alt="">
+            <h1 class="text-white text-2xl">
+                Move your business online
+            </h1>
+            <p class="text-white text-[15px]">
+                Turn your retail store into an online <br> store and keep serving customers <br> without missing a beat.
+            </p>
+        </div>
+        <div class="p-10">
+            <img src="./shopify-95384ba1-2884-4311-bb59-ad6924cd0962/assets/sectionTow-c.png" alt="">
+            <h1 class="text-white text-2xl">
+                Switch to Shopify
+            </h1>
+            <p class="text-white text-[15px]">
+                Bring your business to Shopify, no <br> matter which ecommerce platform <br> you’re currently using.
+            </p>
+        </div>
+        <div class="p-10">
+            <img src="./shopify-95384ba1-2884-4311-bb59-ad6924cd0962/assets/sectionTwo-d.png" alt="">
+            <h1 class="text-white text-2xl">
+                Hire a Shopify expert
+            </h1>
+            <p class="text-white text-[15px]">
+                Get set up with the help of a trusted <br> freelancer or agency from the <br> Shopify Experts Marketplace.
+            </p>
+        </div>
+     </div> 
+    </div>
+    <!-- third -->
+    <div class="text-center py-20">
+        <h1 class="text-4xl font-bold">
+            With you wherever you’re going
+        </h1>
+        <p class="text-lg md:text-2xl pt-10">
+            One platform with all the ecommerce and point of sale features <br> you need to start, run, and grow your business.
+        </p>
+    </div>
+    <!-- four -->
+    <div class="flex flex-col items-center md:flex-row mx-auto justify-between p-10 ">
+        <div>
+            <img class="w-[750px] pl-10" src="https://cdn.shopify.com/shopifycloud/brochure/assets/home/poster-sell-9a9415a0989001f51a3870a065e65b4cfaa5dbaa250288f60a7e5b6ba4f22394.jpg" alt="">
+        </div>
+        <div>
+            <h1 class="text-4xl pt-20">
+                Sell everywhere
+            </h1>
+            <p class="text-slate-500 text-xl py-10">
+                Use one platform to sell products to anyone, anywhere—in <br> person with Point of Sale and online through your website, social <br> media, and online marketplaces.
+            </p>
+            <h3 class="text-green-700 text-xl font-bold">
+                Explore ways to sell
+            </h3>
+        </div>
+    </div>
+    <!-- five -->
+    <div class="flex flex-col items-center md:flex-row mx-auto justify-between  ">
+        <div class="pl-20 pt-20">
+            <h1 class="text-4xl">
+                Market your business
+            </h1>
+            <p class="text-slate-700 text-lg py-10">
+                Take the guesswork out of marketing with built-in tools that help <br> you create, execute, and analyze digital marketing campaigns.
+            </p>
+            <h3 class="text-green-700 text-xl font-bold">
+                Explore how to market your business
+            </h3>
+        </div>
+        <div>
+            <img class="w-[500px] ml-20" src="https://cdn.shopify.com/shopifycloud/brochure/assets/home/market-small-084eab2d72b510555838c446501d27dd7380585450efcaaa97453289b2b69c79.jpg" alt="">
+        </div>
+    </div>
+    <!-- six -->
+    <div class="flex flex-col items-center md:flex-row mx-auto justify-between  ">
+        <div>
+            <img class="w-[750px] pl-10" src="./shopify-95384ba1-2884-4311-bb59-ad6924cd0962/assets/section three block three.png" alt="">
+        </div>
+        <div>
+            <h1 class="text-4xl pt-20">
+                Manage everything
+            </h1>
+            <p class="text-slate-500 text-xl py-10">
+                Gain the insights you need to grow—use a single <br> dashboard to manage orders, shipping, and payments <br> anywhere you go.
+            </p>
+            <h3 class="text-green-700 text-xl font-bold">
+                Explore how to market your business
+            </h3>
+        </div>
+    </div>
+    <!-- seven -->
+    <div class="bg-slate-100 h-[600px]" >
+        <h1 class="text-4xl text-green-900 pl-10 py-20" >
+            Explore more from Shopify in India
+        </h1>
+        <div class=" flex flex-col items-center md:flex-row mx-auto justify-between  bg-white  md:w-[1100px] ml-10 ">
+            <div class="pl-10">
+                <h3 class="font-bold text-xl py-3" >
+                    START
+                </h3>
+                <h1 class="text-2xl ">
+                    Launch your store with the help of a Shopify <br> Expert
+                </h1>
+                <p class="py-5 text-slate-500">
+                    Find hundreds of experts from India ready to help you get your <br> store up and running, from choosing a theme to building a fully <br> customized site.
+                </p>
+                <h2 class="text-green-900 font-bold">
+                    Browse Experts in India
+                </h2>
+            </div>
+            <div>
+                <img class="w-[610px] " src="./shopify-95384ba1-2884-4311-bb59-ad6924cd0962/assets/section four img.webp" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- eight -->
+    <div>
+        <h1 class="pt-60 text-2xl md:text-4xl pl-20 py-10">
+            Empowering independent business <br> owners everywhere
+        </h1>
+        <p class="text-2xl md:text-2xl pl-20">
+            Millions of businesses in 175 countries around the world have <br> made over $496 billion USD in sales using Shopify.
+        </p>
+        <h3 class="pl-20 py-10 text-xl text-green-900 font-bold">
+            Learn more about Shopify
+        </h3>
+    </div>
+    <!-- nine -->
+    <div class="flex flex-col items-center md:flex-row mx-auto justify-between   pl-40">
+        <div>
+            <img class="  md:w-[500px] h-[550px]" src="./shopify-95384ba1-2884-4311-bb59-ad6924cd0962/assets/section six img.jpg" alt="">
+        </div>
+        <div class="bg-emerald-900 w-[500px]">
+            <p class="p-10 text-2xl text-center font-bold text-white">
+                “Shopify was my knight in <br> shining armor when I <br> exhausted every other <br> possibility of getting my <br> online store up and running. <br> It was stunningly easy to <br> use, with more features and <br> plug-ins that I didn’t even <br> know I wanted.”
+            </p>
+           <img class="ml-40" src="https://cdn.shopify.com/shopifycloud/brochure/assets/home/testimonials/logo-alicia-souza-small-4ac1bd956b9bf4d8fd78b6597f24ba9379714861042d3a199065b704a11657e6.png" alt="">
+           <h1 class="text-center p-10 text-white">
+            Alicia | Alicia Souza
+           </h1>
+        </div>
+    </div>
+    <!-- ten -->
+    <div class="flex flex-col items-center md:flex-row mx-auto justify-between   gap-10 py-20">
+        <div>
+            <img class=" w-20 md:ml-60" src="./shopify-95384ba1-2884-4311-bb59-ad6924cd0962/assets/section six brand 1.webp" alt="">
+        </div>
+        <div>
+            <img class="w-20" src="./shopify-95384ba1-2884-4311-bb59-ad6924cd0962/assets/section six brand 2.webp" alt="">
+        </div>
+        <div>
+            <img class="w-20" src="./shopify-95384ba1-2884-4311-bb59-ad6924cd0962/assets/section six brand 3.png" alt="">
+        </div>
+        <div>
+            <img class="w-20" src="./shopify-95384ba1-2884-4311-bb59-ad6924cd0962/assets/section 6 brand 4.webp" alt="">
+        </div>
+        <div>
+            <img class="w-20" src="./shopify-95384ba1-2884-4311-bb59-ad6924cd0962/assets/section sis brand 5.webp" alt="">
+        </div>
+        <div>
+            <img class="w-20" src="./shopify-95384ba1-2884-4311-bb59-ad6924cd0962/assets/section 6 brand 6.webp" alt="">
+        </div>
+        <div>
+            <img class="w-20" src="./shopify-95384ba1-2884-4311-bb59-ad6924cd0962/assets/section 6 brand 7.webp" alt="">
+        </div>
+     </div>
+     <!-- eleven -->
+     <div class="flex flex-col items-center md:flex-row mx-auto justify-between   bg-slate-100">
+        <div class="" >
+            <h1 class="text-5xl p-20">Get the help you need, <br> every step of the way</h1>
+         <div class="flex pl-20">
+            <div>
+                <h1 class="text-xl font-bold">
+                   Shopify support
+                </h1>
+                <p class="text-md">
+                    Contact support 24/7, whether <br> you’re troubleshooting issues or <br> looking for business advice.
+                </p>
+                <h2 class="text-xl font-bold text-green-900">
+                    Contact support
+                </h2>
+            </div>
+            <div class="pl-10" >
+                <h1 class="text-xl font-bold">
+                    Shopify App Store 
+                </h1>
+                <p class="text-sm">
+                    Add features and functionality to <br> your business with 6,000+ apps <br> that integrate directly with <br> Shopify.
+                </p>
+                <h2 class="text-xl font-bold text-green-900">
+                    Visit the Shopify App Store
+                </h2>
+            </div>
+         </div>
+         <div class="pl-20 pt-10">
+            <h1 class="text-xl font-bold">
+                Shopify Experts Marketplace
+            </h1>
+            <p class="text-sm">
+                Hire a Shopify expert to help you <br> with everything from store setup <br> to SEO.
+            </p>
+            <h2 class="text-xl font-bold text-green-900">
+                Explore the Shopify Experts Marketplace 
+            </h2>
+         </div>
+        </div>
+        <div>
+            <img src="https://cdn.shopify.com/shopifycloud/brochure/assets/home/help@desktop-9a31a38edab7cba3389c5d71eccb81ab32d24e0eeb40c8eac3568d98bc179e1e.jpg" class="w-[550px] h-[650px] " alt="">
+        </div>
+     </div>
+<!-- last -->
+<div class="py-40 ">
+    <h1 class=" text-center text-xl md:text-3xl ">
+        Start your business journey with Shopify
+    </h1>
+    <p class="text-center pt-5 text-lg  md:text-2xl md:pb-10">
+        Try Shopify for free, and explore all the tools and services you need to start, run, and grow <br> your business.
+    </p>
+    <button class="ml-[150px] mt-20 md:ml-[580px] bg-green-900 px-7 py-3 rounded text-white text-xl">
+        Start Free Trail
+    </button>
+</div>
+</body>
+<footer class="bg-emerald-900 h-[400px] md:h-[700px]">
+    <div class="flex text-white space-x-4 text-xl p-10">
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Press and Media</a>
+        <a href="#">Shopify plus</a>
+        <a href="#">Sitemap</a>
+    </div>
+    <hr class="hidden md:block py-5 mt-1 border-t-[0.1px] border-[#dedfe0]">
+    <div class="flex text-white p-10">
+        <div class="hidden md:flex flex-col px-5 text-xl">
+            <a class="font-bold" href="#">ONLINE STORE</a>
+            <a href="#">Sell Online</a>
+            <a href="#">Examples</a>
+            <a href="#">Website builder</a>
+            <a href="#">Online retail</a>
+        </div>
+        <div class="hidden md:flex flex-col px-5 text-xl">
+            <a href="#">ecommerce website</a>
+            <a href="#">Domain names</a>
+            <a href="#">Shopping cart</a>
+            <a href="#">ecommerce hosting</a>
+        </div>
+        <div class="hidden md:flex flex-col px-5 text-xl">
+            <a href="#">Mobile commerce</a>
+            <a href="#">Online store builder</a>
+            <a href="#">Dropshipping Business</a>
+            <a href="#">Store themes</a>
+        </div>
+        <div class="hidden md:flex flex-col px-5 text-xl" >
+            <a class="font-bold" href="#">Point of Sale</a>
+            <a href="#">Point of Sale</a>
+            <a href="#">Features</a>
+        </div>
+        <div class="hidden md:flex flex-col px-5 text-xl">
+            <a class="font-bold" href="#">Support</a>
+            <a href="#">24/7 Support</a>
+            <a href="#">Shopify Help Center</a>
+            <a href="#">Shopify community</a>
+            <a href="#">API documnetation</a>
+            <a href="#">Free Tools</a>
+            <a href="#">Free Stock Photos</a>
+            <a href="#">Websites for sale</a>
+            <a href="#">Logo Marker</a>
+            <a href="#">Business name generator</a>
+            <a href="#">Research</a>
+            <a href="#">legal</a>
+        </div>
+        <div class="hidden md:flex flex-col px-5 text-xl">
+            <a class="font-bold" href="#">SHOPIFY</a>
+            <a href="#">Contact</a>
+            <a href="#">Partner program</a>
+            <a href="#">Affiliate program</a>
+            <a href="#">App developers</a>
+            <a href="#">Investors</a>
+            <a href="#">Blog topics</a>
+            <a href="#">Community Events</a>
+        </div>
+    </div>
+    <hr class="hidden md:block py-5 mt-1 border-t-[0.1px] border-[#dedfe0]">
+    <div class="flex flex-col md:flex-row">
+        <div class="text-white space-x-4 ml-[100px] text-3xl">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-pinterest"></i>
+        </div>
+        <div class="flex text-white text-lg mt-10 md:text-2xl space-x-4 ml-[80px] md:ml-[350px]">
+            <h2>
+                Terms and Condition
+            </h2>
+            <h2>
+                Privacy Policy
+            </h2>
+            <h2>
+                <i class="fa-solid fa-globe"></i>
+                India
+            </h2>
+        </div>
+    </div>
+</footer>
+</html>
